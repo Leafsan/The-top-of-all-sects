@@ -61,7 +61,7 @@
         "inner_strength": {
           "exp": {
             "value": 0,
-            "max": 8
+            "max": 6
           },
           "bonus": 0,
           "label": "TOAS.InnerStrength",
@@ -91,7 +91,7 @@
         "outer_strength": {
           "exp": {
             "value": 0,
-            "max": 8
+            "max": 6
           },
           "bonus": 0,
           "label": "TOAS.OuterStrength",
@@ -121,7 +121,7 @@
         "face": {
           "exp": {
             "value": 0,
-            "max": 8
+            "max": 6
           },
           "bonus": 0,
           "label": "TOAS.Face",
