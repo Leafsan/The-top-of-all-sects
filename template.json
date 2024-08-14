@@ -1,73 +1,339 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
-    "templates": {
-      "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
-        "biography": ""
-      }
-    },
+    "types": ["character", "npc", "sect", "\uD83D\uDD5B clock", "factions"],
     "character": {
-      "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1
+      "byname": "",
+      "sect": "",
+      "master": "",
+      "look": "",
+      "nature": "",
+      "characteristics": "",
+      "ki": {
+        "value": 0,
+        "max": 8,
+        "max_default": 8,
+        "name_default": "TOAS.Ki",
+        "name": "TOAS.Ki"
+      },
+      "mind_devil": {
+        "value": 0,
+        "max": 4,
+        "max_default": 4,
+        "name_default": "TOAS.MindDevil",
+        "name": "TOAS.MindDevil",
+        "options": [
+          "TOAS.MindDevilCold",
+          "TOAS.MindDevilSoft",
+          "TOAS.MindDevilReckless",
+          "TOAS.MindDevilObsessed",
+          "TOAS.MindDevilUnstable",
+          "TOAS.MindDevilParanoid",
+          "TOAS.MindDevilVicious",
+          "TOAS.MindDevilHaunted"
+        ],
+        "list": []
+      },
+      "healing-clock": {
+        "value": 0,
+        "max": 4
+      },
+      "experience": {
+        "value": 0,
+        "max": 8
+      },
+      "harm": {
+        "light": {
+          "one": "",
+          "two": ""
+        },
+        "medium": {
+          "one": "",
+          "two": ""
+        },
+        "heavy": {
+          "one": ""
+        },
+        "deadly": {
+          "one": ""
         }
       },
-      "abilities": {
-        "str": {
-          "value": 10
+      "attributes": {
+        "inner_strength": {
+          "exp": {
+            "value": 0,
+            "max": 8
+          },
+          "bonus": 0,
+          "label": "TOAS.InnerStrength",
+          "skills": {
+            "study": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Study"
+            },
+            "hunt": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Hunt"
+            },
+            "grasp": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Grasp"
+            },
+            "subdue": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Subdue"
+            }
+          }
         },
-        "dex": {
-          "value": 10
+        "outer_strength": {
+          "exp": {
+            "value": 0,
+            "max": 8
+          },
+          "bonus": 0,
+          "label": "TOAS.OuterStrength",
+          "skills": {
+            "assassinate": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Assassinate"
+            },
+            "arts": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Arts"
+            },
+            "stealth": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Stealth"
+            },
+            "wreck": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Wreck"
+            }
+          }
         },
-        "con": {
-          "value": 10
-        },
-        "int": {
-          "value": 10
-        },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
-          "value": 10
+        "face": {
+          "exp": {
+            "value": 0,
+            "max": 8
+          },
+          "bonus": 0,
+          "label": "TOAS.Face",
+          "skills": {
+            "vow": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Vow"
+            },
+            "intimidate": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Intimidate"
+            },
+            "please": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Please"
+            },
+            "bragging": {
+              "value": 0,
+              "max": 4,
+              "label": "TOAS.Bragging"
+            }
+          }
         }
-      }
-    },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
-    }
-  },
-  "Item": {
-    "types": ["item", "feature", "spell"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+      },
+      "fame": {
+        "value": 0,
+        "max": 61,
+        "rank": {
+          "name": "",
+          "value": 0,
+          "max": 5
+        }
+      },
+      "state_move": {
+        "lv0": {
+          "rolling_dodge": {
+            "label": "TOAS.RollingDodge",
+            "value": true
+          },
+          "broken_arrow": {
+            "label": "TOAS.BrokenArrow",
+            "value": true
+          },
+          "quivering_palm": {
+            "label": "TOAS.QuiveringPalm",
+            "value": true
+          }
+        },
+        "lv1": {
+          "thousand_pound": {
+            "label": "TOAS.ThousandPound",
+            "value": false
+          },
+          "wall_climbing": {
+            "label": "TOAS.WallClimbing",
+            "value": false
+          },
+          "false_death": {
+            "label": "TOAS.FalseDeath",
+            "value": false
+          },
+          "face_change": {
+            "label": "TOAS.FaceChange",
+            "value": false
+          }
+        },
+        "lv2": {
+          "hardening_cloth": {
+            "label": "TOAS.HardeningCloth",
+            "value": false
+          },
+          "sending_voice": {
+            "label": "TOAS.SendingVoice",
+            "value": false
+          },
+          "airborne_dash": {
+            "label": "TOAS.AirborneDash",
+            "value": false
+          },
+          "bone_shrink": {
+            "label": "TOAS.BoneShrink",
+            "value": false
+          },
+          "grab_blade": {
+            "label": "TOAS.GrabBlade",
+            "value": false
+          }
+        },
+        "lv3": {
+          "bell_armor": {
+            "label": "TOAS.BellArmor",
+            "value": false
+          },
+          "echo_voice": {
+            "label": "TOAS.EchoVoice",
+            "value": false
+          },
+          "samadhi_fire": {
+            "label": "TOAS.SamadhiFire",
+            "value": false
+          },
+          "temperature_comfort": {
+            "label": "TOAS.TemperatureComfort",
+            "value": false
+          },
+          "rip_flesh": {
+            "label": "TOAS.RipFlesh",
+            "value": false
+          }
+        },
+        "lv4": {
+          "iron_body": {
+            "label": "TOAS.IronBody",
+            "value": false
+          },
+          "telekinesis": {
+            "label": "TOAS.Telekinesis",
+            "value": false
+          },
+          "blink": {
+            "label": "TOAS.Blink",
+            "value": false
+          },
+          "poison_endurance": {
+            "label": "TOAS.PoisonEndurance",
+            "value": false
+          }
+        },
+        "lv5": {
+          "reflection_body": {
+            "label": "TOAS.ReflectionBody",
+            "value": false
+          },
+          "sword_command": {
+            "label": "TOAS.SwordCommand",
+            "value": false
+          }
+        }
+      },
+      "kung_fu": {
+        "named_move": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "move_type": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        },
+        "mantra": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        },
+        "formation": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        },
+        "body_control": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        },
+        "walking": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        },
+        "extra": {
+          "name": "",
+          "origin": "",
+          "reason": "",
+          "appearance": "",
+          "level": {
+            "value": 0,
+            "max": 5
+          },
+          "description": ""
+        }
+      },
+      "weapon_proficiency": []
     }
   }
 }
