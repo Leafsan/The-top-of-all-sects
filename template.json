@@ -8,6 +8,8 @@
       "look": "",
       "nature": "",
       "characteristics": "",
+      "acquaintances": [],
+      "acquaintances_label": "TOAS.Acquaintances",
       "ki": {
         "value": 0,
         "max": 8,
