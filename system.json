@@ -4,48 +4,79 @@
   "description": "A system for the top of all sects.",
   "authors": [
     {
-      "name": "Asacolips",
-      "discord": "asacolips"
-    },
-    {
-      "name": "Lee Talman",
-      "discord": ".pizzaWizard"
+      "name": "Wookyung Choi",
+      "nick": "Leafsan",
+      "email": "cwk950906@gmail.com"
     }
   ],
-  "url": "Replace this with a link to your public repository",
+  "url": "https://github.com/Leafsan/The-top-of-all-sects",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "Replace this with a link to file issues or tickets",
-  "changelog": "CHANGELOG.md",
-  "media": [
-    {
-      "type": "setup",
-      "url": "systems/boilerplate/assets/anvil-impact.png",
-      "thumbnail": "systems/boilerplate/assets/anvil-impact.png"
-    }
-  ],
-  "version": "2.0.0",
+  "version": "0.1.0",
   "compatibility": {
     "minimum": 11,
     "verified": "11.315"
   },
-  "esmodules": ["module/boilerplate.mjs"],
-  "styles": ["css/boilerplate.css"],
+  "esmodules": ["module/thetopsects.mjs"],
+  "styles": ["css/thetopsects.css"],
   "languages": [
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "ko",
+      "name": "Korean",
+      "path": "lang/ko.json"
     }
   ],
-  "packs": [],
-  "packFolders": [],
-  "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
-  "download": "This must link to a .zip file of the current version",
-  "background": "systems/boilerplate/assets/anvil-impact.png",
-  "gridDistance": 5,
-  "gridUnits": "ft",
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power"
+  "packs": [
+    {
+      "name": "item",
+      "label": "Items",
+      "systems": "the-top-of-all-sects",
+      "path": "./packs/items.db",
+      "banner": "systems/boilerplate/assets/items.png",
+      "type": "item"
+    },
+    {
+      "name": "crew_type",
+      "label": "Crew Type",
+      "systems": "the-top-of-all-sects",
+      "path": "./packs/crew_type.db",
+      "banner": "systems/boilerplate/assets/crew-type.png",
+      "type": "Item"
+    },
+    {
+      "name": "entanglements",
+      "label": "Entanglements",
+      "systems": "the-top-of-all-sects",
+      "path": "./packs/entanglements.db",
+      "banner": "systems/boilerplate/assets/entanglements.png",
+      "type": "RollTable"
+    },
+    {
+      "name": "entanglements-macro",
+      "label": "Entanglements Macro",
+      "systems": "the-top-of-all-sects",
+      "path": "./packs/entanglements-macro.db",
+      "banner": "systems/boilerplate/assets/entanglements-macro.png",
+      "type": "Macro"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Items",
+      "sorting": "m",
+      "packs": ["item", "crew_type"]
+    },
+    {
+      "name": "Entanglements",
+      "sorting": "m",
+      "packs": ["entanglements", "entanglements-macro"]
+    }
+  ],
+  "manifest": "https://raw.githubusercontent.com/Leafsan/The-top-of-all-sects/main/system.json",
+  "download": "@need to be filled rather"
 }
